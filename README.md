@@ -19,7 +19,7 @@ Here's a quick example, adding the middleware to a Rails app in `config/initiali
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :backoffice, app_id: "MY_APP_ID", secret: "MY_SECRET", backoffice_url: "https://backoffice.com", callback: "https://my-app/auth/backoffice/callback"
+  provider :backoffice, app_id: "MY_APP_ID", secret: "MY_SECRET", backoffice_url: "https://backoffice.com", callback_path: "/auth/backoffice/callback"
 end
 ```
 
@@ -32,7 +32,7 @@ Option name | Explanation
 `app_id` | Your app's id from Backoffice
 `secret` | Your app's secret from Backoffice
 `backoffice_url` | Absolute URL to the backoffice
-`callback` | You app's OmniAuth callback URL for the Backoffice strategy
+`callback_path` | You app's OmniAuth callback path for the Backoffice strategy
 
 ## Failure
 The strategy will call OmniAuth's `fail!` method if something goes wrong on the authentication (i.e. user denying the authentication at the backoffice).

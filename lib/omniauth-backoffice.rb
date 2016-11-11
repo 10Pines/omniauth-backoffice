@@ -8,7 +8,7 @@ module OmniAuth
       option :app_id
       option :secret
       option :backoffice_url
-      option :callback
+      option :callback_path
       option :info_fields, [:username, :email, :full_name, :root]
 
       def request_phase
