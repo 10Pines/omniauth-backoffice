@@ -12,7 +12,10 @@ module OmniAuth
       option :info_fields, [:username, :email, :full_name, :root]
 
       def request_phase
-        redirect options.backoffice_url + "/auth/sign_in?redirect_url=#{options.callback}&app_id=#{options.app_id}"
+        callback_path = options.callback_path
+        callback_path = "/" + callback_path unless callback_path[0] == "/"
+        callback_url = request.base_url + callback_path
+        redirect options.backoffice_url + "/auth/sign_in?redirect_url=#{callback_url}&app_id=#{options.app_id}"
       end
 
       def callback_phase
