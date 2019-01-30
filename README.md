@@ -6,7 +6,7 @@
 
 Add to your `Gemfile`:
 ```
-gem 'omniauth-backoffice', git: 'https://github.com/ijpiantanida/omniauth-backoffice.git'
+gem 'omniauth-backoffice', git: 'https://github.com/10pines/omniauth-backoffice.git'
 ```
 
 then run `bundle install`.
