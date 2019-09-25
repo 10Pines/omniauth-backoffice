@@ -55,7 +55,8 @@ end
   info: {
     email: 'user@user.com',
     name: 'Super User',
-    nickname: 'myusername'
+    nickname: 'myusername',
+    fecha_de_ingreso: '08/09/2014'
   },
   extra: {
     root: true
