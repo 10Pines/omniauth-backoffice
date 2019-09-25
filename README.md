@@ -56,7 +56,8 @@ end
     email: 'user@user.com',
     name: 'Super User',
     nickname: 'myusername',
-    fecha_de_ingreso: '08/09/2014'
+    fecha_de_ingreso: '08/09/2014',
+    cuit_o_cuil: '30-59209832-3'
   },
   extra: {
     root: true
