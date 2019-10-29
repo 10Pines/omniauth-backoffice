@@ -55,7 +55,8 @@ end
   info: {
     email: 'user@user.com',
     name: 'Super User',
-    nickname: 'myusername'
+    nickname: 'myusername',
+    user_token: 'adagagagsdbah3141h1'
   },
   extra: {
     root: true

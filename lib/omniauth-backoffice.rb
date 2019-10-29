@@ -9,7 +9,7 @@ module OmniAuth
       option :secret
       option :backoffice_url
       option :callback_path
-      option :info_fields, [:username, :email, :full_name, :root]
+      option :info_fields, [:username, :email, :full_name, :root,:user_token]
 
       def request_phase
         callback_path = options.callback_path
@@ -23,7 +23,7 @@ module OmniAuth
           fail!(request.params['denied'])
         else
           secret = options.secret
-          data = "uid=#{uid}&email=#{info[:email]}&username=#{info[:nickname]}&full_name=#{info[:name]}&root=#{extra[:root]}"
+          data = "uid=#{uid}&email=#{info[:email]}&username=#{info[:nickname]}&full_name=#{info[:name]}&root=#{extra[:root]}&user_token=#{info[:user_token]}"
           digest = OpenSSL::Digest.new('sha256')
           hmac = OpenSSL::HMAC.hexdigest(digest, secret, data)
 
@@ -43,6 +43,7 @@ module OmniAuth
         info[:name] = request.params['full_name']
         info[:email] = request.params['email']
         info[:nickname] = request.params['username']
+        info[:user_token] = request.params['user_token']
         info
       end
       extra do
