@@ -1,3 +1,5 @@
+⚠️⚠️⚠️ **IMPORTANTE**: esta gema está deprecada porque fue reemplazada por una implementación de Oauth directamente en el backoffice. Ver repo de backoffice para más info ⚠️⚠️⚠️
+
 # Omniauth-backoffice
 
 10Pines's Backoffice Strategy for OmniAuth.
